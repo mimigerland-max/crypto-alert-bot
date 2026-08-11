@@ -1,0 +1,41 @@
+name: Crypto Alert Scan
+
+on:
+  schedule:
+    # Toutes les 5 minutes. Ne fonctionne sans limite que sur un repo PUBLIC
+    # (GitHub Actions est gratuit et illimité sur les repos publics).
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+    # Permet aussi de lancer le scan manuellement depuis l'onglet "Actions" sur GitHub
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # nécessaire pour que le bot commit history.json
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Lancer le scan
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python main.py
+
+      - name: Sauvegarder l'historique mis à jour
+        run: |
+          git config user.name "crypto-alert-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add history.json
+          git diff --staged --quiet || git commit -m "Update history.json [skip ci]"
+          git push
