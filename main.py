@@ -7,7 +7,7 @@ boostés), tous les deux gratuits et sans clé API.
 from coingecko_trending import get_trending_coins
 from dexscreener_new_tokens import get_boosted_tokens
 from history import load_history, save_scan_result
-from discord_alert import send_alert
+from discord_alert import send_trending_alert, send_new_token_alert
 
 TOP_N_TO_WATCH = 10
 MAX_BOOSTED_TO_CHECK = 15
@@ -31,12 +31,7 @@ def check_coingecko(history, current_state):
 
         if key not in history:
             print(f"[analyse] {coin['symbol']} : NOUVEAU dans le top CoinGecko (rang #{coin['rank']})")
-            send_alert(
-                f"{coin['symbol']} (CoinGecko trending)",
-                current_mentions=coin["rank"],
-                average=TOP_N_TO_WATCH,
-                ratio=TOP_N_TO_WATCH / coin["rank"],
-            )
+            send_trending_alert(coin["symbol"], coin["rank"], TOP_N_TO_WATCH)
             alerts += 1
 
     return alerts
@@ -54,16 +49,11 @@ def check_dexscreener(history, current_state):
     alerts = 0
     for token in boosted[:MAX_BOOSTED_TO_CHECK]:
         key = f"dex:{token['id']}"
-        current_state[key] = 1  # présence = 1, pas de classement ici
+        current_state[key] = 1
 
         if key not in history:
             print(f"[analyse] Nouveau token boosté : {token['id']} ({token['chain']})")
-            send_alert(
-                f"{token['id']} ({token['chain']}, DexScreener)",
-                current_mentions=1,
-                average=1,
-                ratio=1,
-            )
+            send_new_token_alert(token["id"], token["chain"], token["description"])
             alerts += 1
 
     return alerts
