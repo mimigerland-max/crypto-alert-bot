@@ -1,0 +1,32 @@
+name: Pump.fun Sniper
+
+on:
+  schedule:
+    # Relance toutes les 6 heures. Le script tourne ~5h50 à chaque fois
+    # et se coupe proprement avant, donc la couverture est quasi-continue
+    # (juste quelques minutes de pause entre deux relances).
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    # Permet de lancer manuellement depuis l'onglet Actions
+
+jobs:
+  snipe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355  # un peu sous la limite dure de 6h (360 min) de GitHub Actions
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installer les dépendances
+        run: pip install -r requirements.txt
+
+      - name: Lancer le sniper pump.fun
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          MIN_SOL_TO_ALERT: "2"
+        run: python pump_fun_sniper.py
