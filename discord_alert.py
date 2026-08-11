@@ -70,6 +70,24 @@ def send_new_token_alert(token_id, chain, description):
     _post_to_discord(message)
 
 
+def send_sniper_alert(token_id, chain, description):
+    """
+    Pour un token TOUT JUSTE créé (avant même d'être boosté).
+    Le signal le plus rapide, mais aussi le plus risqué.
+    """
+    message = (
+        f"⚡ **[SNIPER] Token flambant neuf détecté**\n"
+        f"Token : **{token_id}**\n"
+        f"Chaîne : {chain}\n"
+        f"{description}\n"
+        f"🔴 RISQUE MAXIMUM : ce token vient tout juste d'être créé. La grande majorité des "
+        f"tokens à ce stade sont des rug pulls (le créateur part avec l'argent). Aucune "
+        f"vérification de fiabilité n'a été faite. Vérifie toi-même (liquidité verrouillée ?, "
+        f"contrat renonciable ?, holders ?) avant toute action. Pas un conseil financier."
+    )
+    _post_to_discord(message)
+
+
 if __name__ == "__main__":
     # Tests : python discord_alert.py
     send_alert("TESTCOIN", current_mentions=42, average=10.0, ratio=4.2)
