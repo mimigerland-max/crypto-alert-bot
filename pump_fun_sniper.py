@@ -9,7 +9,9 @@ import threading
 import time
 import websocket
 
+from coingecko_trending import get_trending_coins
 from config import (
+    COINS,
     HISTORY_FILE,
     MIN_HIGH_CONVICTION_SCORE,
     MIN_SOL_TO_ALERT as DEFAULT_MIN_SOL,
@@ -18,7 +20,8 @@ from config import (
 from dexscreener_enrich import enrich_token
 from discord_alert import send_pump_alert
 from history import load_history, save_scan_result, was_seen
-from memecoin_score import score_memecoin
+from memecoin_score import score_memecoin_strict
+from pump_metadata import fetch_metadata
 
 PUMPPORTAL_WS_URL = "wss://pumpportal.fun/api/data"
 MAX_RUNTIME_SECONDS = int(5.83 * 3600)
@@ -36,24 +39,57 @@ def on_open(ws):
     ws.send(json.dumps({"method": "subscribeNewToken"}))
 
 
-def _evaluate_and_maybe_alert(mint, name, symbol, sol_amount, pump_url, key):
+def _get_trending_keywords():
+    """
+    Construit la liste de mots-clés "tendance" utilisés pour repérer les
+    tokens qui surfent sur une narrative déjà virale : coins CoinGecko
+    trending en direct + coins suivis dans config.COINS (fallback si
+    l'API CoinGecko est indisponible).
+    """
+    keywords = set(COINS.keys())
+    try:
+        for coin in get_trending_coins():
+            if coin.get("name"):
+                keywords.add(coin["name"])
+            if coin.get("symbol"):
+                keywords.add(coin["symbol"])
+    except Exception as e:
+        print(f"[pump_sniper] Trending CoinGecko indisponible : {e}")
+    return keywords
+
+
+def _evaluate_and_maybe_alert(mint, name, symbol, sol_amount, pump_url, uri, key):
     """
     Appelé après PUMP_SCORE_DELAY_SECONDS, une fois que le marché a eu le
-    temps de se former un minimum. Enrichit via DexScreener puis score le
-    token. N'alerte QUE si le score dépasse MIN_HIGH_CONVICTION_SCORE.
+    temps de se former un minimum. Enrichit via DexScreener + métadonnées
+    (image/description/réseaux sociaux) puis applique le scoring strict.
+    N'alerte QUE si le score dépasse MIN_HIGH_CONVICTION_SCORE ET qu'au
+    moins un réseau social est lié au token.
 
     Rappel : un score élevé signale un setup statistiquement plus favorable
     (liquidité saine, forte pression acheteuse, momentum positif, activité
-    réelle). Ce n'est PAS une garantie de x2/x3 — aucun filtre ne peut
-    garantir un pump, le marché reste imprévisible et manipulable.
+    réelle, communauté visible, narrative porteuse). Ce n'est PAS une
+    garantie de x2/x3 — aucun filtre ne peut garantir un pump, le marché
+    reste imprévisible et manipulable.
     """
     enriched = enrich_token(mint, "solana")
-    score, reasons, passed = score_memecoin(enriched, initial_sol=sol_amount, is_boosted=False)
+    metadata = fetch_metadata(uri)
+    trending_keywords = _get_trending_keywords()
 
-    if not passed or score < MIN_HIGH_CONVICTION_SCORE:
+    score, reasons, passed = score_memecoin_strict(
+        enriched,
+        initial_sol=sol_amount,
+        metadata=metadata,
+        name=name,
+        symbol=symbol,
+        trending_keywords=trending_keywords,
+    )
+
+    if not passed:
         print(
             f"[pump_sniper] {name} ({symbol}) écarté : score {score}/100 "
-            f"(seuil forte conviction = {MIN_HIGH_CONVICTION_SCORE})."
+            f"(seuil forte conviction = {MIN_HIGH_CONVICTION_SCORE}, "
+            f"communauté requise)."
         )
         return
 
@@ -83,6 +119,7 @@ def on_message(ws, message):
     name = data.get("name", "?")
     symbol = data.get("symbol", "?")
     mint = data.get("mint", "")
+    uri = data.get("uri", "")
     if not mint:
         return
 
@@ -104,7 +141,7 @@ def on_message(ws, message):
     timer = threading.Timer(
         PUMP_SCORE_DELAY_SECONDS,
         _evaluate_and_maybe_alert,
-        args=(mint, name, symbol, sol_amount, pump_url, key),
+        args=(mint, name, symbol, sol_amount, pump_url, uri, key),
     )
     timer.daemon = True
     timer.start()
