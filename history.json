@@ -433,10 +433,6 @@
   ],
   "cg:PENGU": [
     {
-      "timestamp": "2026-08-17T15:01:35.121102+00:00",
-      "count": 2
-    },
-    {
       "timestamp": "2026-08-17T15:31:44.742273+00:00",
       "count": 2
     },
@@ -831,6 +827,10 @@
     {
       "timestamp": "2026-09-09T19:51:27.249740+00:00",
       "count": 8
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 6
     }
   ],
   "cg:HOLO": [
@@ -900,10 +900,6 @@
     }
   ],
   "cg:BTC": [
-    {
-      "timestamp": "2026-08-24T23:28:01.441104+00:00",
-      "count": 9
-    },
     {
       "timestamp": "2026-08-24T23:45:47.502146+00:00",
       "count": 6
@@ -1299,6 +1295,10 @@
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
       "count": 8
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 7
     }
   ],
   "cg:HYPE": [
@@ -1705,10 +1705,6 @@
   ],
   "cg:PONS": [
     {
-      "timestamp": "2026-08-26T11:21:38.008044+00:00",
-      "count": 3
-    },
-    {
       "timestamp": "2026-08-26T11:51:06.562274+00:00",
       "count": 2
     },
@@ -2102,6 +2098,10 @@
     },
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
+      "count": 2
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
       "count": 2
     }
   ],
@@ -5205,10 +5205,6 @@
   ],
   "cg:PUMP": [
     {
-      "timestamp": "2026-08-25T02:33:21.072032+00:00",
-      "count": 5
-    },
-    {
       "timestamp": "2026-08-25T03:27:25.278866+00:00",
       "count": 4
     },
@@ -5603,6 +5599,10 @@
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
       "count": 6
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 4
     }
   ],
   "cg:DOS": [
@@ -6381,10 +6381,6 @@
   ],
   "cg:CASHCAT": [
     {
-      "timestamp": "2026-08-25T04:50:16.938148+00:00",
-      "count": 5
-    },
-    {
       "timestamp": "2026-08-25T05:19:13.612222+00:00",
       "count": 2
     },
@@ -6779,6 +6775,10 @@
     {
       "timestamp": "2026-09-09T00:33:33.149519+00:00",
       "count": 10
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 9
     }
   ],
   "sniper:solana:7SP5NdZk": [
@@ -9827,10 +9827,6 @@
   ],
   "cg:LIT": [
     {
-      "timestamp": "2026-08-23T23:15:37.677262+00:00",
-      "count": 10
-    },
-    {
       "timestamp": "2026-08-23T23:53:09.372012+00:00",
       "count": 8
     },
@@ -10225,6 +10221,10 @@
     {
       "timestamp": "2026-09-09T19:51:27.249740+00:00",
       "count": 7
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 3
     }
   ],
   "cg:VIRTUAL": [
@@ -14893,10 +14893,6 @@
   ],
   "cg:VVV": [
     {
-      "timestamp": "2026-08-17T23:02:14.084798+00:00",
-      "count": 1
-    },
-    {
       "timestamp": "2026-08-17T23:30:11.514672+00:00",
       "count": 1
     },
@@ -15291,6 +15287,10 @@
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
       "count": 7
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 8
     }
   ],
   "dex:solana:5rNUTV6P7ULZ8M2p83Crmdr6hJc5wFJX6Njcd8CbAYRA": [
@@ -29183,6 +29183,10 @@
     {
       "timestamp": "2026-09-09T05:06:17.493586+00:00",
       "count": 7
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 10
     }
   ],
   "dex:solana:F6LHzhjpbT3Z5f1xPNUNbmb84BjazjZZoK8MqhWGpump": [
@@ -66879,6 +66883,10 @@
     {
       "timestamp": "2026-09-03T00:34:12.893784+00:00",
       "count": 1
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 1
     }
   ],
   "sniper:solana:CoGxjkh7UVGoncHZcovgHwmNodpkBsRNmPiEShorpump": [
@@ -67792,6 +67800,10 @@
     },
     {
       "timestamp": "2026-09-04T06:01:18.342455+00:00",
+      "count": 1
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
       "count": 1
     }
   ],
@@ -72325,6 +72337,10 @@
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
       "count": 3
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 5
     }
   ],
   "cg:RAY": [
@@ -74063,6 +74079,10 @@
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
       "count": 1
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 1
     }
   ],
   "dex:solana:STNKxjt18MTLYf66eNpcvLfjgm7VUchouXe8Do3WkZZ": [
@@ -74278,6 +74298,10 @@
     },
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
+      "count": 1
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
       "count": 1
     }
   ],
@@ -74589,17 +74613,29 @@
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
       "count": 1
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 1
     }
   ],
   "dex:solana:GDz2tXD7DG2hBRe9fJcmFqWYTmkp4svedN5uKG5Epump": [
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
       "count": 1
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 1
     }
   ],
   "dex:solana:4cBXdRrSaL7nuqkZoAVdgwDe9TvwHQHuV3FTVUvFpump": [
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
+      "count": 1
+    },
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
       "count": 1
     }
   ],
@@ -74624,6 +74660,30 @@
   "sniper:solana:22sxraBMWeaRaahRK1j2i7DuHdu1Pa16GNcd39UVpwcg": [
     {
       "timestamp": "2026-09-09T22:00:46.774461+00:00",
+      "count": 1
+    }
+  ],
+  "dex:solana:8sdZVK4cLbXPEstDTpyN3VAtdNfFJvWVKchEYS8epump": [
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 1
+    }
+  ],
+  "dex:solana:915YcCbtupYLTz3RwfKjYngzBG2Bk2RX8We4D2HSpump": [
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:Beive9LahA9oGQZ9ctj1wrVg7NFUeT4g35LkJKztpump": [
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:D85ni39UcMFR1cdJgsWotgVgnzJm2kuXsyeS3B5NzDxo": [
+    {
+      "timestamp": "2026-09-09T23:56:14.638987+00:00",
       "count": 1
     }
   ]
