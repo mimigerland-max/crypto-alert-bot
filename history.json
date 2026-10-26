@@ -433,10 +433,6 @@
   ],
   "cg:PENGU": [
     {
-      "timestamp": "2026-10-04T20:23:43.030471+00:00",
-      "count": 2
-    },
-    {
       "timestamp": "2026-10-04T23:18:36.275884+00:00",
       "count": 7
     },
@@ -831,6 +827,10 @@
     {
       "timestamp": "2026-10-26T12:41:44.053392+00:00",
       "count": 4
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 5
     }
   ],
   "cg:HOLO": [
@@ -1303,10 +1303,6 @@
   ],
   "cg:HYPE": [
     {
-      "timestamp": "2026-08-26T10:22:06.838920+00:00",
-      "count": 3
-    },
-    {
       "timestamp": "2026-08-26T10:55:57.055659+00:00",
       "count": 3
     },
@@ -1701,6 +1697,10 @@
     {
       "timestamp": "2026-10-26T18:51:28.895114+00:00",
       "count": 6
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 7
     }
   ],
   "cg:PONS": [
@@ -2755,10 +2755,6 @@
   ],
   "cg:ETH": [
     {
-      "timestamp": "2026-08-21T06:55:23.850786+00:00",
-      "count": 6
-    },
-    {
       "timestamp": "2026-08-21T07:34:48.060095+00:00",
       "count": 6
     },
@@ -3153,6 +3149,10 @@
     {
       "timestamp": "2026-10-25T15:06:52.497350+00:00",
       "count": 8
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 10
     }
   ],
   "cg:CRV": [
@@ -4633,10 +4633,6 @@
   ],
   "cg:SOL": [
     {
-      "timestamp": "2026-08-25T14:42:49.276444+00:00",
-      "count": 8
-    },
-    {
       "timestamp": "2026-08-25T16:07:41.521932+00:00",
       "count": 8
     },
@@ -5031,6 +5027,10 @@
     {
       "timestamp": "2026-10-26T18:51:28.895114+00:00",
       "count": 10
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 9
     }
   ],
   "cg:SUI": [
@@ -10619,10 +10619,6 @@
   ],
   "cg:LIT": [
     {
-      "timestamp": "2026-08-31T22:46:40.737342+00:00",
-      "count": 10
-    },
-    {
       "timestamp": "2026-09-01T01:24:27.921237+00:00",
       "count": 9
     },
@@ -11017,6 +11013,10 @@
     {
       "timestamp": "2026-10-25T06:28:38.016672+00:00",
       "count": 10
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 8
     }
   ],
   "cg:VIRTUAL": [
@@ -21043,6 +21043,10 @@
     {
       "timestamp": "2026-10-20T15:41:03.761224+00:00",
       "count": 10
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 4
     }
   ],
   "sniper:solana:6yEeah8ePQfAmuQMxuzwE2RsdvEVeJgLhUbgQG8tdstc": [
@@ -30781,10 +30785,6 @@
   ],
   "cg:AERO": [
     {
-      "timestamp": "2026-08-24T20:28:59.057398+00:00",
-      "count": 5
-    },
-    {
       "timestamp": "2026-08-24T20:59:12.858944+00:00",
       "count": 6
     },
@@ -31179,6 +31179,10 @@
     {
       "timestamp": "2026-10-26T06:01:21.957434+00:00",
       "count": 8
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
     }
   ],
   "dex:solana:F6LHzhjpbT3Z5f1xPNUNbmb84BjazjZZoK8MqhWGpump": [
@@ -35089,10 +35093,6 @@
   ],
   "cg:ZEC": [
     {
-      "timestamp": "2026-09-15T00:35:29.761082+00:00",
-      "count": 2
-    },
-    {
       "timestamp": "2026-09-15T05:15:20.119259+00:00",
       "count": 7
     },
@@ -35487,6 +35487,10 @@
     {
       "timestamp": "2026-10-26T12:41:44.053392+00:00",
       "count": 10
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 3
     }
   ],
   "cg:LDO": [
@@ -96339,6 +96343,10 @@
     {
       "timestamp": "2026-10-24T16:41:50.165764+00:00",
       "count": 1
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
     }
   ],
   "dex:solana:APrqixzHUJusuxLuGGULWZCeDCMGS5JjGcdMDnFBZvrv": [
@@ -98158,6 +98166,10 @@
   "dex:solana:39fzweMMY4DRAgBQN61jbMGRoa2RBFTjAY3Vg95Epump": [
     {
       "timestamp": "2026-10-12T17:00:45.115359+00:00",
+      "count": 1
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
       "count": 1
     }
   ],
@@ -100745,6 +100757,10 @@
     {
       "timestamp": "2026-10-19T12:13:06.381737+00:00",
       "count": 6
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 2
     }
   ],
   "dex:solana:GgDt9qLFxumCfXGHq82Tx2onjepL5SS3xpXXiUshpump": [
@@ -101851,6 +101867,10 @@
     {
       "timestamp": "2026-10-25T15:06:52.497350+00:00",
       "count": 1
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
     }
   ],
   "dex:solana:DURNeFdg7ws8ZVGrQBstxGeRRECYV9Jn3PLwLkFpump": [
@@ -102173,6 +102193,10 @@
     {
       "timestamp": "2026-10-26T18:51:28.895114+00:00",
       "count": 4
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 6
     }
   ],
   "cg:MPLX": [
@@ -102952,6 +102976,10 @@
     },
     {
       "timestamp": "2026-10-23T10:16:39.561849+00:00",
+      "count": 1
+    },
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
       "count": 1
     }
   ],
@@ -105428,6 +105456,84 @@
   "sniper:solana:4cDVSYnzoWsSzYRxe1rETA1hfcgs1ktgpQyeRm6Vpump": [
     {
       "timestamp": "2026-10-26T18:51:28.895114+00:00",
+      "count": 1
+    }
+  ],
+  "dex:solana:2oYmpGGMtpU94dp3HFUpJ3WJJSRZngJfkcxYUs8apump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "dex:solana:5EW3LXh5NYXHmH8X7kAG8iRm9x7Wwz2s6TCHjyFMpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "dex:solana:DtBatQsrazRRVp37UTMQH7TnXL1mT2qrJTj7PB9Rpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "dex:solana:JBKpuU4zBuBgCUvWB1UuCZx3G4WYm5c1AHvcMNxLpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "dex:solana:DEZrHa3CeoQs2kGqMPo6D1TFgHB2KWoPMJMjf9HJpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "dex:solana:3734SDUqg5nV3DmrK7ZZ1QvK7TVmJMBJbQUQqVNtpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:9DYYooaG81arhZPXet4ovykKVytgP6sxUirTsyLCpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:2zk2ajqf4U8m97yY33GF5PLXh12q6i8JmE4a7bQgpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:CNZb6yDRfEWphA1EAiNAThGTJSBpJvP2UnpCnuzwrift": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:9QmgZaEyayczYTG6xVEijrsYbu7iB6u2oJBKZDsTdhwZ": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:DNjwxV2UiBhqhDjUkcr7NtktH7uocJfW9DPGQ2Mcpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:DtBatQsrazRRVp37UTMQH7TnXL1mT2qrJTj7PB9Rpump": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
+      "count": 1
+    }
+  ],
+  "sniper:solana:6FQrcfh9HGPrdiyTxcVd3RtSNXVp7vWwBv1LafGgnke6": [
+    {
+      "timestamp": "2026-10-26T22:53:52.666154+00:00",
       "count": 1
     }
   ]
